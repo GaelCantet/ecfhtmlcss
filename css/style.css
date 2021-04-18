@@ -333,7 +333,75 @@ p {
 }
 
 /*Students*/
+.students {
+	background-color: var(--primary);
+	color: #fff;
+}
 
+.students .container {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.students-title {
+	margin-bottom: 4.3rem;
+	text-align: center;
+}
+
+.students-list {
+	display: grid;
+	row-gap: 4rem;
+}
+
+.students-item figure {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.student-picture {
+	margin-bottom: 2rem;
+	max-height: 21.8rem;
+	max-width: 21.8rem;
+	border-radius: 50%;
+}
+
+.student-name {
+	font-size: 2.4rem;
+	font-weight: 500;
+}
+
+.student-link {
+	display: block;
+	text-align: center;
+	text-decoration: underline;
+	transition: .3s;
+}
+
+.student-link:hover,
+.student-link:focus {
+	color: var(--font-color);
+}
+
+@media screen and (min-width: 48em) {
+	.students-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: 62em) {
+	.students-list {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media screen and (min-width: 75em) {
+	.students-list {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
 
 /*Course*/
 .course .container {
@@ -382,7 +450,7 @@ adress {
 }
 
 .adress-title {
-	font-weight: 600;
+	font-weight: 500;
 }
 
 .adress-link {
