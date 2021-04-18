@@ -181,3 +181,112 @@ p {
 	margin-left: 1.6rem;
 	vertical-align: middle;
 }
+
+/*Header*/
+.main-header {
+	position: relative;
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+	background-color: var(--primary);
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.main-header .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-title {
+	display: inline-block;
+}
+
+.menu-btn {
+	position: relative;
+	margin-top: 1.8rem;
+	height: 3.5rem;
+	width: 3.5rem;
+	background-color: transparent;
+	border: none;
+	border-top: .3rem solid #fff;
+	border-bottom: .3rem solid #fff;
+}
+
+.menu-btn::before,
+.menu-btn::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	height: .2rem;
+	background-color: #fff;
+	transition: .3s;
+}
+
+.menu-btn.menu-open {
+	border: none;
+}
+
+.menu-open::after {
+	transform: rotate(45deg);
+	transition: .3s;
+}
+
+.menu-open::before {
+	transform: rotate(-45deg);
+	transition: .3s;
+}
+
+.menu-list {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background-color: var(--primary);
+	font-size: 2rem;
+	font-weight: 600;
+	transform: translateY(-100%);
+	transition: .3s;
+}
+
+[hidden] {
+	display: block;
+	visibility: hidden;
+}
+
+.menu-list:not([hidden]) {
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.menu-link {
+	display: block;
+	padding: 1rem 2rem;
+	text-align: center;
+	transition: .3s;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+	background-color: #fff;
+	color: var(--primary);
+}
+
+@media screen and (min-width: 75em) {
+	.menu-btn {
+		display: none;
+	}
+
+	.menu-list {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+
+	[hidden] {
+		visibility: visible;
+	}
+}
