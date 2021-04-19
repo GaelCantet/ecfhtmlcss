@@ -151,8 +151,9 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 100%;
+	flex-grow: 1;
 	padding: 2.4rem 1.6rem;
+	overflow-y: hidden;
 }
 
 .card-date {
@@ -251,6 +252,7 @@ p {
 
 .menu-list {
 	position: absolute;
+	z-index: 10;
 	top: 100%;
 	left: 0;
 	right: 0;
@@ -306,7 +308,8 @@ p {
 .hero {
 	position: relative;
 	background-image: url(../img/home-hero.jpg);
-	min-height: 71.1rem;
+	background-size: cover;
+	background-position: center;
 }
 
 @media (min-resolution: 144dpi) {
@@ -316,15 +319,11 @@ p {
 }
 
 .hero-content {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	max-width: 95.6rem;
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
 	padding: 2.5rem;
 	background-color: rgba(0,0,0,.8);
 }
@@ -339,16 +338,45 @@ p {
 }
 
 .hero-link {
-	display: inline;
+	margin-left: auto;
 	max-width: max-content;
 	padding: 2rem 3rem;
-	font-size: 3.2rem;
+	font-size: 2.8rem;
 	font-weight: 600;
 	background-color: var(--primary);
 	color: #fff;
+	transition: .3s;
+}
+
+.hero-link:hover,
+.hero-link:focus {
+	background-color: #fff;
+	color: var(--primary);
 }
 
 @media screen and (min-width: 48em) {
+
+	.hero {
+		position: static;
+		min-height: 71.1rem;
+	}
+
+	.hero .container {
+		position: relative;
+		min-height: 71.1rem;
+	}
+
+	.hero-content {
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 100%;
+		max-width: 95.6rem;
+		left: auto;
+		bottom: 12rem;
+		height: auto;
+	}
+
 	.hero-title {
 		font-size: 7.2rem;
 	}
