@@ -255,13 +255,20 @@ ul.page-list {
 	text-transform: uppercase;
 }
 
-.main-header .container {
+.main-menu {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .header-title {
-	display: inline-block;
+	margin-right: auto;
+	transition: .3s;
+}
+
+.header-title:hover,
+.header-title:focus {
+	color: var(--font-color);
 }
 
 .menu-btn {
@@ -348,6 +355,7 @@ ul.page-list {
 		justify-content: space-between;
 		align-items: center;
 		height: 100%;
+		transform: translateY(0);
 	}
 
 	[hidden] {
@@ -464,7 +472,7 @@ ul.page-list {
 }
 
 /*Students*/
-.students {
+.students-home {
 	background-color: var(--primary);
 	color: #fff;
 }
@@ -508,7 +516,12 @@ ul.page-list {
 	display: block;
 	text-align: center;
 	text-decoration: underline;
+	color: var(--primary);
 	transition: .3s;
+}
+
+.students-home .student-link {
+	color: #fff;
 }
 
 .student-link:hover,
