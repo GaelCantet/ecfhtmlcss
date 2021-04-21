@@ -129,6 +129,39 @@ p {
 }
 
 /*Composants*/
+.default-btn {
+	display: inline-block;
+	max-width: max-content;
+	padding: 1rem 2rem;
+	font-size: 2.4rem;
+	border: .1rem solid var(--primary);
+	border-radius: .4rem;
+	font-weight: 500;
+	text-align: center;
+	background-color: var(--primary);
+	color: #fff;
+	transition: .3s;
+}
+
+.default-btn img {
+	display: inline-block;
+	margin-left: 1.6rem;
+	vertical-align: middle;
+	transition: .3s;
+}
+
+.default-btn:hover,
+.default-btn:focus {
+	background-color: #fff;
+	color: var(--primary);
+}
+
+.default-btn:hover img,
+.default-btn:focus img {
+	filter: invert(56%) sepia(25%) saturate(2100%) hue-rotate(336deg) brightness(120%) contrast(98%);
+	transform: translateX(1.6rem);
+}
+
 .card {
 	display: flex;
 	flex-direction: column;
@@ -171,20 +204,18 @@ p {
 
 .card-link {
 	display: block;
+	max-width: 100%;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
+	border: none;
 	font-size: 2.4rem;
-	font-weight: 500;
-	text-align: center;
-	background-color: var(--primary);
-	color: #fff;
+	border-radius: 0 0 .4rem .4rem;
 }
 
-.card-link img {
-	display: inline-block;
-	margin-left: 1.6rem;
-	vertical-align: middle;
-	transition: .3s;
+.card-link:hover,
+.card-link:focus {
+	background-color: var(--primary);
+	color: #fff;
 }
 
 .card-link:focus {
@@ -193,7 +224,7 @@ p {
 
 .card-link:hover img,
 .card-link:focus img {
-	transform: translateX(1.6rem);
+	filter: none;
 }
 
 ul.page-list {
@@ -223,6 +254,39 @@ ul.page-list {
 .page-button:focus {
 	background-color: var(--primary);
 	color: #fff;
+}
+
+label {
+	display: block;
+	margin-bottom: 2rem;
+	font-size: 2rem;
+}
+
+input,
+textarea {
+	display: block;
+	width: 100%;
+	border: none;
+	border-bottom: .1rem solid #707070;
+	font-size: 2rem;
+	transition: .3s;
+}
+
+textarea {
+	min-height: 22rem;
+}
+
+::placeholder {
+	font-style: italic;
+	color: #33110080;
+}
+
+input:focus,
+textarea:focus {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	outline: none;
+	border-color: var(--primary);
 }
 
 /*Section header*/
@@ -567,6 +631,45 @@ ul.page-list {
 	}
 
 	.course-title {
+		grid-column: 1/-1;
+	}
+}
+
+/*Contact*/
+.contact .container {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.contact .section-title {
+	margin-bottom: 5rem;
+}
+
+.contact form {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	row-gap: 4.4rem;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 105.8rem;
+}
+
+.contact .default-btn {
+	grid-column: 1/-1;
+	margin-left: auto;
+}
+
+@media screen and (min-width: 48rem) {
+	.contact .section-title {
+		margin-bottom: 14rem;
+	}
+
+	.contact form {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 3.2rem;
+	}
+
+	.contact .form-group:last-of-type {
 		grid-column: 1/-1;
 	}
 }
