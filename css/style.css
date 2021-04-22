@@ -66,6 +66,7 @@
 :root {
 	--primary: #FD7E37;
 	--font-color: #331100;
+	--secondary: #FD9558;
 }
 
 /*Layout*/
@@ -212,13 +213,16 @@ p {
 	border-radius: 0 0 .4rem .4rem;
 }
 
+.card-link:hover {
+	background-color: var(--secondary);
+}
+
 .card:focus {
 	border: .2rem dotted rgba(0,0,0,.5);
 }
 
 .card:hover .card-link,
 .card:focus .card-link{
-	background-color: var(--primary);
 	color: #fff;
 }
 
@@ -566,6 +570,15 @@ textarea:focus {
 	row-gap: 4rem;
 }
 
+.students-item a {
+	display: block;
+}
+
+.students-item a:hover span,
+.students-item a:focus span {
+	color: var(--font-color);
+}
+
 .students-item figure {
 	display: flex;
 	flex-direction: column;
@@ -597,11 +610,6 @@ textarea:focus {
 
 .students-home .student-link {
 	color: #fff;
-}
-
-.student-link:hover,
-.student-link:focus {
-	color: var(--font-color);
 }
 
 @media screen and (min-width: 48em) {
