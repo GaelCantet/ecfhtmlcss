@@ -194,6 +194,10 @@ p {
 	overflow-y: hidden;
 }
 
+.card-title {
+	transition: .3s;
+}
+
 .date {
 	color: #663014;
 }
@@ -215,8 +219,9 @@ p {
 	border-radius: 0 0 .4rem .4rem;
 }
 
-.card-link:hover {
-	background-color: var(--secondary);
+.card:hover .card-title,
+.card:focus .card-title {
+	color: var(--primary);
 }
 
 .card:focus {
@@ -228,8 +233,11 @@ p {
 	color: #fff;
 }
 
-.card:hover .card-link img,
-.card:focus .card-link img {
+.card-link:hover {
+	background-color: var(--primary);
+}
+
+.card-link:hover img{
 	filter: none;
 	transform: translateX(1.6rem);
 }
