@@ -133,20 +133,20 @@ p {
 /*Composants*/
 .default-btn {
 	display: inline-block;
-	max-width: max-content;
 	padding: 1rem 2rem;
 	font-size: 2.4rem;
 	border: .1rem solid var(--primary);
 	border-radius: .4rem;
 	font-weight: 500;
 	text-align: center;
+	line-height: 1;
 	background-color: var(--primary);
 	color: #fff;
 	transition: .3s;
 }
 
-
-.default-btn img {
+.default-btn span::after {
+	content: url(../img/arrow.svg);
 	display: inline-block;
 	margin-left: 1.6rem;
 	vertical-align: middle;
@@ -159,10 +159,9 @@ p {
 	color: var(--primary);
 }
 
-.default-btn:hover img,
-.default-btn:focus img {
+.default-btn:hover span::after {
+	transform: translateX(1rem);
 	filter: invert(56%) sepia(25%) saturate(2100%) hue-rotate(336deg) brightness(120%) contrast(98%);
-	transform: translateX(1.6rem);
 }
 
 .card article {
@@ -233,13 +232,10 @@ p {
 	color: #fff;
 }
 
-.card-link:hover {
+.card-link:hover,
+.card-link:hover span::after {
 	background-color: var(--primary);
-}
-
-.card-link:hover img{
 	filter: none;
-	transform: translateX(1.6rem);
 }
 
 ul.page-list {
@@ -486,7 +482,7 @@ textarea:focus {
 	margin-left: -1.5rem;
 	margin-right: -1.5rem;
 	padding: 2.5rem;
-	background-color: rgba(0,0,0,.8);
+	background-color: #00000080;
 }
 
 .hero-title {
@@ -789,6 +785,10 @@ textarea:focus {
 .actu-title,
 .actu-date {
 	text-align: center;
+}
+
+.actu-text {
+	font-weight: 400;
 }
 
 @media screen and (min-width: 32em) {
