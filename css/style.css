@@ -686,6 +686,26 @@ textarea:focus {
 	}
 }
 
+/*Module*/
+.module-header {
+	background-image: url(../img/formation1@2x.jpg);
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	color: #fff;
+}
+
+.module-header .container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 40rem;
+}
+
+.module-text {
+	margin-top: 0;
+}
+
 /*Single Student*/
 .student-portrait {
 	display: block;
