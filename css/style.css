@@ -144,6 +144,7 @@ p {
 	transition: .3s;
 }
 
+
 .default-btn img {
 	display: inline-block;
 	margin-left: 1.6rem;
@@ -350,8 +351,8 @@ textarea:focus {
 	transition: .3s;
 }
 
-.header-title:hover,
-.header-title:focus {
+.header-title:not(.current-page):hover,
+.header-title:not(.current-page):focus {
 	color: var(--primary);
 	background-color: #fff;
 }
@@ -425,13 +426,9 @@ textarea:focus {
 
 .menu-link:hover,
 .menu-link:focus,
-.current-page {
+.menu-item .current-page {
 	background-color: #fff;
 	color: var(--primary);
-}
-
-.current-page {
-	pointer-events: none;
 }
 
 
