@@ -689,7 +689,7 @@ textarea:focus {
 }
 
 /*Module*/
-.module-header {
+.single-course-header {
 	background-image: url(../img/formation1@2x.jpg);
 	background-size: cover;
 	background-position: center;
@@ -697,15 +697,15 @@ textarea:focus {
 	color: #fff;
 }
 
-.module-header .container {
+.single-course-header .container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	min-height: 40rem;
 }
 
-.module-text,
-.actu-text {
+.single-course-text,
+.single-news-text {
 	margin-top: 0;
 }
 
@@ -769,27 +769,27 @@ textarea:focus {
 }
 
 /*Actu*/
-.actu-section .container {
+.single-news-section .container {
 	display: grid;
 	row-gap: 4rem;
 	max-width: 84rem;
 }
 
-.actu-title {
+.single-news-title {
 	font-size: 3.2rem;
 }
 
-.actu-title,
-.actu-date {
+.single-news-title,
+.single-news-date {
 	text-align: center;
 }
 
-.actu-text {
+.single-news-text {
 	font-weight: 400;
 }
 
 @media screen and (min-width: 32em) {
-	.actu-title {
+	.single-news-title {
 		font-size: 4.8rem;
 	}
 }
