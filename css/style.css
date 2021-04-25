@@ -101,6 +101,7 @@
 	}
 }
 
+
 /*Typo*/
 body {
 	background-color: #fff;
@@ -362,7 +363,6 @@ textarea:focus {
 
 .menu-btn {
 	position: relative;
-	margin-top: 1.8rem;
 	height: 3.5rem;
 	width: 3.5rem;
 	z-index: 3;
@@ -453,6 +453,10 @@ textarea:focus {
 		align-items: center;
 		height: 100%;
 		transform: translateY(0);
+	}
+
+	.menu-link {
+		opacity: 1;
 	}
 
 	[hidden] {
