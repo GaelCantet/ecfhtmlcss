@@ -350,6 +350,7 @@ textarea:focus {
 	padding-left: 1rem;
 	padding-right: 1rem;
 	margin-right: auto;
+	z-index: 3;
 	transition: .3s;
 }
 
@@ -364,6 +365,7 @@ textarea:focus {
 	margin-top: 1.8rem;
 	height: 3.5rem;
 	width: 3.5rem;
+	z-index: 3;
 	background-color: transparent;
 	border: none;
 	border-top: .3rem solid #fff;
@@ -398,7 +400,7 @@ textarea:focus {
 
 .menu-list {
 	position: absolute;
-	z-index: 10;
+	z-index: 2;
 	top: 100%;
 	left: 0;
 	right: 0;
@@ -407,6 +409,21 @@ textarea:focus {
 	font-weight: 600;
 	transform: translateY(-100%);
 	transition: .3s;
+}
+
+.menu-link {
+	display: block;
+	padding: 1rem 2rem;
+	text-align: center;
+	opacity: 0;
+	transition: opacity .3s ease-in-out .3s;
+}
+
+.menu-link:hover,
+.menu-link:focus,
+.menu-item .current-page {
+	background-color: #fff;
+	color: var(--primary);
 }
 
 [hidden] {
@@ -419,18 +436,8 @@ textarea:focus {
 	transform: translateY(0);
 }
 
-.menu-link {
-	display: block;
-	padding: 1rem 2rem;
-	text-align: center;
-	transition: .3s;
-}
-
-.menu-link:hover,
-.menu-link:focus,
-.menu-item .current-page {
-	background-color: #fff;
-	color: var(--primary);
+.menu-list:not([hidden]) .menu-link {
+	opacity: 1;
 }
 
 
