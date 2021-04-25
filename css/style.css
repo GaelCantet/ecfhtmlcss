@@ -457,6 +457,7 @@ textarea:focus {
 
 	.menu-link {
 		opacity: 1;
+		transition: .3s;
 	}
 
 	[hidden] {
