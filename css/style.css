@@ -408,7 +408,8 @@ textarea:focus {
 	font-size: 2rem;
 	font-weight: 600;
 	transform: translateY(-100%);
-	transition: .3s;
+	transition: transform .3s ease-in-out 0s;
+	
 }
 
 .menu-link {
@@ -416,7 +417,7 @@ textarea:focus {
 	padding: 1rem 2rem;
 	text-align: center;
 	opacity: 0;
-	transition: opacity .3s ease-in-out .3s;
+	transition: opacity .3s ease-in-out 0s;
 }
 
 .menu-link:hover,
@@ -434,10 +435,12 @@ textarea:focus {
 .menu-list:not([hidden]) {
 	visibility: visible;
 	transform: translateY(0);
+	transition: transform .3s ease-in-out 0s;
 }
 
 .menu-list:not([hidden]) .menu-link {
 	opacity: 1;
+	transition: opacity .3s ease-in-out .3s;
 }
 
 
