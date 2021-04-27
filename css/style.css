@@ -146,7 +146,7 @@ p {
 	transition: .3s;
 }
 
-.default-btn span::after {
+.default-btn::after {
 	content: url(../img/arrow.svg);
 	display: inline-block;
 	margin-left: 1.6rem;
@@ -160,7 +160,8 @@ p {
 	color: var(--primary);
 }
 
-.default-btn:hover span::after {
+.default-btn:hover::after,
+.default-btn:focus::after {
 	transform: translateX(1rem);
 	filter: invert(56%) sepia(25%) saturate(2100%) hue-rotate(336deg) brightness(120%) contrast(98%);
 }
@@ -231,7 +232,7 @@ p {
 }
 
 .card-link:hover,
-.card-link:hover span::after {
+.card-link:hover::after {
 	background-color: var(--primary);
 	filter: none;
 }
